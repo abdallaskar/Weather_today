@@ -8,7 +8,7 @@ const egyptCities = [
     { latitude: 31.0409, longitude: 31.3785 },
     { latitude: 26.1642, longitude: 32.7267 }];
 
-// API Key for OpenWeatherMap (replace with your own key)
+// API Key for OpenWeatherMap 
 const API_KEY = "6d055e39ee237af35ca066f35474e9df"; // Get your key from https://openweathermap.org/
 
 // DOM Element for sidebar Citys
@@ -89,6 +89,7 @@ async function fetchForecast(latitude, longitude) {
 // function to open location in map
 async function openLocation() {
     const { latitude, longitude } = await getLatitudeLongitude();
+    // Open Google Maps with the coordinates
     let url = "https://www.google.pl/maps?q=" + latitude + "," + longitude;
     window.open(url, "_blank");
 }
