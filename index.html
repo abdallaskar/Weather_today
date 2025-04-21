@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather today</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- header of my page -->
+    <header>
+        <h1 class="heading">Know today's weather</h1>
+    </header>
+    <!-- main content area contains weather information -->
+    <section class="weather-container">
+        <!-- left side bar contains buttons -->
+        <aside class="sidebar">
+            <h3>Locations</h3>
+            <button id="cairo">Cairo</button>
+            <button id="alex">Alexandria </button>
+            <button id="mans">Mansoura</button>
+            <button id="qen">Qena</button>
+        </aside>
+        <!-- main content area contains weather information -->
+        <article class="weather-card">
+            <img src="Icons/sun--v1.png" alt="Weather Icon" width="60">
+            <h1>35°C</h1>
+            <p class="condition">Clear </p>
+            <p class="location">Mansoura, EG</p>
+            <div class="button-group">
+                <button>
+                    <img src="Icons/loc.png" alt="Pin Icon" width="20">
+                    Get Location
+                </button>
+                <button>
+                    <img src="Icons/cloud.png" alt="Cloud Icon" width="20">
+                    Refresh Weather
+                </button>
+            </div>
+            <div class="weather-details">
+                <div class="detail-box">
+                    <p>Humidity</p>
+                    <h4>60%</h4>
+                </div>
+                <div class="detail-box">
+                    <p>Wind Speed</p>
+                    <h4>10 km/h</h4>
+                </div>
+                <div class="detail-box">
+                    <p>Feels Like</p>
+                    <h4>37°C</h4>
+                </div>
+                <div class="detail-box">
+                    <p>Pressure</p>
+                    <h4>1012 hPa</h4>
+                </div>
+            </div>
+        </article>
+        <!-- right side bar contains forecast -->
+        <aside class="forecast-card">
+            <h3>Five-Day Forecast</h3>
+            <div class="forecast-item">
+                <p>Tue</p>
+                <img src="https://img.icons8.com/color/96/000000/sun--v1.png" alt="Sunny" width="30">
+                <p>34°C</p>
+            </div>
+            <div class="forecast-item">
+                <p>Wed</p>
+                <img src="https://img.icons8.com/color/96/000000/partly-cloudy-day--v1.png" alt="Cloudy" width="30">
+                <p>32°C</p>
+            </div>
+            <div class="forecast-item">
+                <p>Thu</p>
+                <img src="https://img.icons8.com/color/96/000000/clouds.png" alt="Cloudy" width="30">
+                <p>30°C</p>
+            </div>
+            <div class="forecast-item">
+                <p>Fri</p>
+                <img src="https://img.icons8.com/color/96/000000/rain--v1.png" alt="Rain" width="30">
+                <p>28°C</p>
+            </div>
+            <div class="forecast-item">
+                <p>Sat</p>
+                <img src="https://img.icons8.com/color/96/000000/sun--v1.png" alt="Sunny" width="30">
+                <p>33°C</p>
+            </div>
+        </aside>
+    </section>
+    <!-- footer of my page -->
+    <footer class="footer">
+        <p> Created by Abdalla Sakr </p>
+    </footer>
+    <!-- JavaScript file link -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

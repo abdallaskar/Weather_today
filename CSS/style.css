@@ -1,0 +1,211 @@
+/* Start Qlobal statments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url('../Images/rainavif.avif') no-repeat center center/cover;
+}
+
+@media screen and (max-width: 768px) {
+    .weather-container .forecast-card {
+        display: none;
+    }
+
+    .weather-container .weather-card {
+        width: 100%;
+    }
+}
+
+/* End Qlobal statments */
+
+/* Start Header */
+
+.heading {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: 750;
+    margin: 20px;
+}
+
+/* End Header */
+/* Start Main weather container */
+.weather-container {
+
+    display: flex;
+    padding: 5px;
+    gap: 23px;
+    width: 70%;
+}
+
+/* Start sidebar for locations */
+.sidebar {
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    width: 25%;
+    color: white;
+    gap: 15px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar button {
+    width: 100%;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+}
+
+.sidebar button:hover {
+    background: linear-gradient(45deg, #43cea2, #185a9d);
+    transform: scale(1.15) translateY(-5px);
+}
+
+/* End sidebar for locations */
+/* Start weather card */
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.weather-card h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.weather-card .condition {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.weather-card .location {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.button-group {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weather-card button {
+    width: 40%;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.weather-card button:hover {
+    background: linear-gradient(45deg, #43cea2, #185a9d);
+    transform: scale(1.15) translateY(-5px);
+}
+
+.weather-details {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.detail-box {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.detail-box p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.detail-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* End main card */
+/* Start forecast section */
+.forecast-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 25%;
+    color: white;
+}
+
+.forecast-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.forecast-item {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.forecast-item:last-child {
+    border-bottom: none;
+}
+
+/* End forecast section */
+/* End Main weather container */
+/* Start Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+/* End footer */
