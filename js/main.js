@@ -106,7 +106,7 @@ function updateWeatherUI(weatherData) {
 
     // Update DOM elements
     temperatureElement.textContent = `${temperature}°C`;
-    conditionElement.textContent = condition.charAt(0).toUpperCase() + condition.slice(1);
+    conditionElement.textContent = condition;
     locationElement.textContent = location;
     weatherIconElement.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     humidityElement.textContent = `${humidity}%`;
@@ -143,7 +143,7 @@ function updateBackground(condition) {
     if (condition.includes("clear")) {
         body.style.background = "url('../Images/clear.avif') no-repeat center center/cover"
     } else if (condition.includes("clouds")) {
-        body.style.background = "url('../Images/cloud.avif') no-repeat center center/cover";
+        body.style.background = "url('../Images/clouds.avif') no-repeat center center/cover";
     } else if (condition.includes("rain") || condition.includes("drizzle")) {
         body.style.background = "url('../Images/rainavif.avif') no-repeat center center/cover";
     } else {
