@@ -18,12 +18,14 @@ powered by the OpenWeatherMap API, and styled with a modern glassmorphism UI.
 - **CSS**: Glassmorphism styling and responsive layout.
 - **JavaScript**: Fetch API for data retrieval, Geolocation API for location.
 - **OpenWeatherMap API**: Weather data provider.
-  
-## Watch Demo 
-[Click here](https://youtu.be/jzM1DEQOM8g)
+
+## live Demo 
+[click here for try](https://abdallaskar.github.io/Weather_today/)
+## youtube video
+[Click here to watch vedio](https://youtu.be/jzM1DEQOM8g)
 
 ## Screenshots
-![Weather Dashboard](Screenshot.jpg)
+![Weather Dashboard](screenshot/Screenshot6.jpg)
 
 ## Installation
 1. Clone the repository:
