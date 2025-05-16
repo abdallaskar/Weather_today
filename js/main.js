@@ -158,13 +158,15 @@ function updateForecastUI(forecastData) {
 function updateBackground(condition) {
     const body = document.body;
     if (condition.includes("clear")) {
-        body.style.background = "url('../Icons/clear.avif') no-repeat center center/cover"
+        body.style.background = "url('./Icons/clear.avif') no-repeat center center/cover"
     } else if (condition.includes("clouds")) {
-        body.style.background = "url('../Icons/cloud.avif') no-repeat center center/cover";
+        body.style.background = "url('./Icons/cloud.avif') no-repeat center center/cover";
     } else if (condition.includes("rain") || condition.includes("drizzle")) {
-        body.style.background = "url('../Icons/rain.avif') no-repeat center center/cover";
+        body.style.background = "url('./Icons/rain.avif') no-repeat center center/cover";
+    } else if (condition.includes("sunny")) {
+        body.style.background = "url('./Icons/sunny.jpg') no-repeat center center/cover";
     } else {
-        body.style.background = "url('../Icons/default.avif') no-repeat center center/cover"; // Default
+        body.style.background = "url('./Icons/default.avif') no-repeat center center/cover"; // Default
     }
 }
 
