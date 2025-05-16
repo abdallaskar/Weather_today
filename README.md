@@ -1,6 +1,7 @@
 # Know today's weather
 
-A sleek weather dashboard for Egyptian cities (Cairo, Alexandria, Mansoura, Qena),  
+A sleek weather dashboard for Egyptian cities (Cairo, Alexandria, Mansoura, Qena),   
+and for global cities ( New York - London - Berlin - Paris - Tokyo ).    
 showcasing current weather and a 5-day forecast. Built with HTML, CSS, and JavaScript,  
 powered by the OpenWeatherMap API, and styled with a modern glassmorphism UI.
 
