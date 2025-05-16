@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: black;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: url('../Images/rainavif.avif') no-repeat center center/cover;
+    background: url('../Icons/rain.avif') no-repeat center center/cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -30,10 +31,9 @@ body {
 
 .heading {
     text-align: center;
-    color: white;
     font-size: 36px;
     font-weight: 750;
-    margin: 20px;
+    margin: 15px;
 }
 
 /* End Header */
@@ -69,11 +69,12 @@ body {
     width: 100%;
     background: linear-gradient(45deg, #6a11cb, #2575fc);
     border: none;
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
-    color: white;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    font-size: 14px;
+    font-weight: 600;
 
 }
 
@@ -94,7 +95,7 @@ body {
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    color: white;
+
 }
 
 .weather-card h1 {
@@ -119,6 +120,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    font-weight: 600;
 }
 
 .weather-card button {
@@ -127,7 +129,7 @@ body {
     border: none;
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    font-weight: 600;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
@@ -144,6 +146,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    font-weight: 600;
 }
 
 .detail-box {
@@ -152,11 +155,13 @@ body {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+    font-weight: 600;
 }
 
 .detail-box p {
     font-size: 14px;
     opacity: 0.9;
+    font-weight: 600;
 }
 
 .detail-box h4 {
@@ -175,7 +180,7 @@ body {
     border-radius: 15px;
     padding: 20px;
     width: 25%;
-    color: white;
+    font-weight: 600;
 }
 
 .forecast-card h3 {

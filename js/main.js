@@ -6,9 +6,16 @@ const egyptCities = [
     { latitude: 30.0444, longitude: 31.2357 },
     { latitude: 31.2001, longitude: 29.9187 },
     { latitude: 31.0409, longitude: 31.3785 },
-    { latitude: 26.1642, longitude: 32.7267 }];
+    { latitude: 26.1642, longitude: 32.7267 },
+    // New international cities
+    { latitude: 40.7128, longitude: -74.0060 },  // New York
+    { latitude: 51.5074, longitude: -0.1278 },   // London
+    { latitude: 52.5200, longitude: 13.4050 },   // Berlin
+    { latitude: 48.8566, longitude: 2.3522 },    // Paris
+    { latitude: 35.6762, longitude: 139.6503 }    // Tokyo
+];
 
-// API Key for OpenWeatherMap 
+// API Key for OpenWeatherMap
 const API_KEY = "6d055e39ee237af35ca066f35474e9df"; // Get your key from https://openweathermap.org/
 
 // DOM Element for sidebar Citys
@@ -16,9 +23,15 @@ const cairoBtn = document.getElementById("cairo");
 const alexBtn = document.getElementById("alex");
 const mansBtn = document.getElementById("mans");
 const qenBtn = document.getElementById("qen");
+const newYourkBtn = document.getElementById("ny");
+const londonBtn = document.getElementById("lon");
+const berlinBtn = document.getElementById("berlin");
+const parisBtn = document.getElementById("paris");
+const tokyoBtn = document.getElementById("tokyo");
 
 // DOM Elements for weather card
 const weatherCard = document.querySelector(".weather-card");
+const cityNameElement = weatherCard.querySelector("h2");
 const temperatureElement = weatherCard.querySelector("h1");
 const conditionElement = weatherCard.querySelector(".condition");
 const locationElement = weatherCard.querySelector(".location");
@@ -96,6 +109,8 @@ async function openLocation() {
 
 // Function to update the UI with weather data
 function updateWeatherUI(weatherData) {
+    // Update city name
+
     const temperature = Math.round(weatherData.main.temp);
     const condition = weatherData.weather[0].description;
     const location = weatherData.name + ", " + weatherData.sys.country;
@@ -106,6 +121,7 @@ function updateWeatherUI(weatherData) {
     const pressure = weatherData.main.pressure;
 
     // Update DOM elements
+    cityNameElement.textContent = weatherData.name;
     temperatureElement.textContent = `${temperature}°C`;
     conditionElement.textContent = condition;
     locationElement.textContent = location;
@@ -142,13 +158,13 @@ function updateForecastUI(forecastData) {
 function updateBackground(condition) {
     const body = document.body;
     if (condition.includes("clear")) {
-        body.style.background = "url('../Images/clear.avif') no-repeat center center/cover"
+        body.style.background = "url('../Icons/clear.avif') no-repeat center center/cover"
     } else if (condition.includes("clouds")) {
-        body.style.background = "url('../Images/clouds.avif') no-repeat center center/cover";
+        body.style.background = "url('../Icons/cloud.avif') no-repeat center center/cover";
     } else if (condition.includes("rain") || condition.includes("drizzle")) {
-        body.style.background = "url('../Images/rainavif.avif') no-repeat center center/cover";
+        body.style.background = "url('../Icons/rain.avif') no-repeat center center/cover";
     } else {
-        body.style.background = "url('../Images/default.avif') no-repeat center center/cover"; // Default
+        body.style.background = "url('../Icons/default.avif') no-repeat center center/cover"; // Default
     }
 }
 
@@ -221,6 +237,11 @@ cairoBtn.addEventListener("click", () => getWeatherforCity(0));
 alexBtn.addEventListener("click", () => getWeatherforCity(1));
 mansBtn.addEventListener("click", () => getWeatherforCity(2));
 qenBtn.addEventListener("click", () => getWeatherforCity(3));
+newYourkBtn.addEventListener("click", () => getWeatherforCity(4));
+londonBtn.addEventListener("click", () => getWeatherforCity(5));
+berlinBtn.addEventListener("click", () => getWeatherforCity(6));
+parisBtn.addEventListener("click", () => getWeatherforCity(7));
+tokyoBtn.addEventListener("click", () => getWeatherforCity(8));
 
 // Initial load
 document.addEventListener("DOMContentLoaded", getWeatherforLocation);
